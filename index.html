@@ -1,1 +1,66 @@
-<h1>Github pages</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario Contable Multilingüe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1><i class="fas fa-book"></i> Diccionario Contable Multilingüe</h1>
+        </header>
+        
+        <div class="main-content">
+            <div class="search-section">
+                <div class="search-box">
+                    <select id="language-select">
+                        <option value="spanish">Español</option>
+                        <option value="english">English</option>
+                        <option value="japanese">日本語</option>
+                    </select>
+                    <input type="text" id="search-input" placeholder="Buscar término...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="term-display" class="hidden">
+                    <div class="term-card-large">
+                        <div class="term-header">
+                            <h2 id="large-term"></h2>
+                            <button id="close-large"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="term-equivalents">
+                            <div class="equivalent" id="spanish-equivalent"></div>
+                            <div class="equivalent" id="english-equivalent"></div>
+                            <div class="equivalent" id="japanese-equivalent"></div>
+                        </div>
+                        <div class="term-definition">
+                            <p id="large-definition"></p>
+                        </div>
+                    </div>
+                </d>
+            </div>
+            
+            <div class="dictionary-section">
+                <div class="language-tabs">
+                    <button class="tab-btn active" data-lang="spanish">Español</button>
+                    <button class="tab-btn" data-lang="english">English</button>
+                    <button class="tab-btn" data-lang="japanese">日本語</button>
+                    <button class="tab-btn" id="view-all-btn">Ver Todos</button>
+                </div>
+                
+                <div class="alphabet-index" id="alphabet-index">
+                    <!-- Las letras del índice se generarán dinámicamente -->
+                </div>
+                
+                <div class="terms-container" id="terms-container">
+                    <!-- Los términos se cargarán dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
